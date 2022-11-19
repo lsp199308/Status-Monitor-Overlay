@@ -748,13 +748,15 @@ public:
 				"Battery Age: %.1f%s\n"
 				"Battery Voltage (45s Avg): %u mV\n"
 				"Charger Type: %u\n"
+				"ChargWattsInfo: %.1f W\n"
 				"Charger Max Voltage: %u mV\n"
 				"Charger Max Current: %u mA\n",
 				(float)_batteryChargeInfoFields->BatteryTemperature / 1000,
 				(float)_batteryChargeInfoFields->RawBatteryCharge / 1000, "%",
 				(float)_batteryChargeInfoFields->BatteryAge / 1000, "%",
 				_batteryChargeInfoFields->VoltageAvg,
-				_batteryChargeInfoFields->ChargerType,
+				strChargerType[_batteryChargeInfoFields->ChargerType],
+				_batteryChargeInfoFields->ChargWattsInfo = _batteryChargeInfoFields->ChargerVoltageLimit * _batteryChargeInfoFields->ChargerCurrentLimit / 1000000,
 				_batteryChargeInfoFields->ChargerVoltageLimit,
 				_batteryChargeInfoFields->ChargerCurrentLimit
 			);
