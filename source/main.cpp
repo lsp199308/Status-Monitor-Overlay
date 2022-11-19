@@ -747,7 +747,7 @@ public:
 				"Battery Raw Charge: %.1f%s\n"
 				"Battery Age: %.1f%s\n"
 				"Battery Voltage (45s Avg): %u mV\n"
-				"Charger Type: %u\n"
+				"Charger Type: %s\n"
 				"ChargWattsInfo: %.1f W\n"
 				"Charger Max Voltage: %u mV\n"
 				"Charger Max Current: %u mA\n",
