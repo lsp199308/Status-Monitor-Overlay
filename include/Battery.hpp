@@ -30,6 +30,19 @@ typedef enum {
     Apple_2000mA = 9
 } BatteryChargeInfoFieldsChargerType;
 
+const char* strChargerType[] = {
+    "None",
+    "PD",
+    "USB-C@1.5A",
+    "USB-C@3.0A",
+    "USB-DCP",
+    "USB-CDP",
+    "USB-SDP",
+    "Apple@0.5A",
+    "Apple@1.0A",
+    "Apple@2.0A",
+};
+
 typedef enum {
     Sink         = 1,
     Source       = 2
@@ -49,6 +62,7 @@ typedef struct {
     int32_t BatteryAge;                                         //Battery age (capacity full / capacity design) per cent-mille (i.e. 100% = 100000 pcm)
     BatteryChargeInfoFieldsPowerRole PowerRole;
     BatteryChargeInfoFieldsChargerType ChargerType;
+    float ChargWattsInfo;
     int32_t ChargerVoltageLimit;                                //Charger and external device voltage limit in mV
     int32_t ChargerCurrentLimit;                                //Charger and external device current limit in mA
     BatteryChargeInfoFieldsFlags Flags;                         //Unknown flags
